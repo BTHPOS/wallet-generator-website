@@ -19,3 +19,8 @@ Run the wallet generator server
 ```sh
 $ node server.js
 ```
+
+To view and interact with the wallet, open your web browser to
+```sh
+http://localhost:8000/
+```
