@@ -1,0 +1,351 @@
+@font-face {
+  font-family: "HKGroteskRegular";
+  src: url("/assets/fonts/hk-grotesk/HKGrotesk-Regular.otf") format("opentype"); }
+@font-face {
+  font-family: "HKGroteskBold";
+  src: url("/assets/fonts/hk-grotesk/HKGrotesk-Bold.otf") format("opentype"); }
+@font-face {
+  font-family: "HKGroteskLight";
+  src: url("/assets/fonts/hk-grotesk/HKGrotesk-Light.otf") format("opentype"); }
+@font-face {
+  font-family: "HKGroteskMedium";
+  src: url("/assets/fonts/hk-grotesk/HKGrotesk-Medium.otf") format("opentype"); }
+@font-face {
+  font-family: "AquaticoRegular";
+  src: url("/assets/fonts/aquatico/Aquatico-Regular.otf") format("opentype"); }
+@media print {
+  header {
+    display: none; }
+
+  footer {
+    display: none; } }
+header {
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2; }
+  header .links {
+    display: inline-block;
+    vertical-align: top; }
+    header .links a {
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 0.5rem 0.5rem;
+      display: inline-block; }
+      header .links a:hover {
+        color: #FFC345; }
+      @media (max-width: 1130px) {
+        header .links a {
+          font-size: 0.9rem; } }
+  header .logo {
+    display: inline-block;
+    vertical-align: top;
+    text-decoration: none; }
+    header .logo div {
+      width: 14rem;
+      height: 10rem;
+      background-repeat: no-repeat;
+      background-image: url(/assets/img/bithereum-top.png);
+      background-size: contain;
+      background-position: top center;
+      margin: 0 2rem; }
+    header .logo h1 {
+      color: #FFFFFF;
+      font-size: 1.4rem;
+      display: none;
+      color: #FFC345;
+      text-transform: uppercase;
+      margin: 0.3rem 2rem 0 2rem;
+      font-family: "HKGroteskMedium"; }
+  header .social {
+    display: inline-block;
+    vertical-align: top; }
+    header .social a {
+      color: #FFFFFF;
+      text-decoration: none;
+      margin: 0.5rem 0.6rem;
+      display: inline-block;
+      font-size: 1.3rem; }
+      header .social a:hover {
+        color: #FFC345; }
+  header.condensed {
+    background-color: #1E2631;
+    box-shadow: 0px 0px 4px 1px #1E2631;
+    padding: 0.5rem; }
+    header.condensed .logo div {
+      display: none; }
+    header.condensed .logo h1 {
+      display: inline-block; }
+  @media (max-width: 1130px) {
+    header {
+      background-color: #1E2631;
+      box-shadow: 0px 0px 4px 1px #1E2631;
+      padding: 0.5rem; }
+      header .social {
+        display: none; }
+      header .links {
+        display: block; }
+      header .logo div {
+        display: none; }
+      header .logo h1 {
+        display: inline-block; } }
+
+.page#page-redemption section#redemption {
+  width: 100%;
+  min-height: 30rem;
+  background: url(/assets/img/btc-eth-bg.png) #1E2631;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem 0 5rem 0; }
+  .page#page-redemption section#redemption .content {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 38rem;
+    display: block; }
+    .page#page-redemption section#redemption .content h2 {
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 1.8rem; }
+    .page#page-redemption section#redemption .content p {
+      line-height: 1.5;
+      color: #FFFFFF;
+      margin-bottom: 2rem; }
+    .page#page-redemption section#redemption .content a {
+      color: #FFC345;
+      text-decoration: none; }
+    .page#page-redemption section#redemption .content h3 {
+      color: #FFC345;
+      display: inline-block;
+      margin: 0 0.5rem; }
+      @media (max-width: 40em) {
+        .page#page-redemption section#redemption .content h3 {
+          margin: 0.5rem 0; } }
+    .page#page-redemption section#redemption .content .steps .step {
+      display: none;
+      margin-bottom: 5rem; }
+      .page#page-redemption section#redemption .content .steps .step.show {
+        display: block; }
+      .page#page-redemption section#redemption .content .steps .step .count {
+        width: 1.8rem;
+        height: 1.8rem;
+        border-radius: 2.5rem;
+        box-sizing: border-box;
+        background-color: #FFC345;
+        color: #000000;
+        text-align: center;
+        padding: 0.2rem 0 0 0;
+        font-size: 1.2rem;
+        display: inline-block;
+        font-family: "HKGroteskBold"; }
+        @media (max-width: 40em) {
+          .page#page-redemption section#redemption .content .steps .step .count {
+            display: none; } }
+      .page#page-redemption section#redemption .content .steps .step #generateaddress {
+        background-color: #FFC345;
+        color: #000000;
+        padding: 0.8rem 2rem;
+        border-radius: 0.3rem;
+        display: block;
+        text-align: center;
+        max-width: 10rem;
+        margin: 2rem 0; }
+        .page#page-redemption section#redemption .content .steps .step #generateaddress:hover {
+          opacity: 0.8; }
+      .page#page-redemption section#redemption .content .steps .step #bthaddress {
+        display: none;
+        text-align: center; }
+        .page#page-redemption section#redemption .content .steps .step #bthaddress.show {
+          display: block; }
+        .page#page-redemption section#redemption .content .steps .step #bthaddress #publicaddressQRCode {
+          vertical-align: top;
+          max-width: 13rem;
+          display: inline-block;
+          text-align: center;
+          margin: 1rem 2rem 4rem 2rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #publicaddressQRCode #publicaddressQR {
+            display: block;
+            margin: 1rem auto;
+            width: 11.25rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #publicaddressQRCode strong {
+            color: #00a30c;
+            display: block;
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 1rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #publicaddressQRCode span {
+            color: #FFFFFF; }
+        .page#page-redemption section#redemption .content .steps .step #bthaddress #privatekeyQRCode {
+          vertical-align: top;
+          max-width: 13rem;
+          display: inline-block;
+          text-align: center;
+          margin: 1rem 2rem 4rem 2rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #privatekeyQRCode #privatekeyQR {
+            display: block;
+            margin: 1rem auto;
+            width: 11.25rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #privatekeyQRCode strong {
+            color: #ff0000;
+            display: block;
+            text-align: center;
+            font-size: 1.4rem;
+            margin-bottom: 1rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #privatekeyQRCode span {
+            color: #FFFFFF; }
+        .page#page-redemption section#redemption .content .steps .step #bthaddress #publicaddressText {
+          display: block;
+          margin-bottom: 3rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #publicaddressText strong {
+            color: #FFFFFF;
+            display: block;
+            margin-bottom: 0.5rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #publicaddressText span {
+            word-wrap: break-word;
+            background-color: #ffcf6a;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem; }
+        .page#page-redemption section#redemption .content .steps .step #bthaddress #privatekeyText {
+          display: block;
+          margin-bottom: 3rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #privatekeyText strong {
+            color: #FFFFFF;
+            display: block;
+            margin-bottom: 0.5rem; }
+          .page#page-redemption section#redemption .content .steps .step #bthaddress #privatekeyText span {
+            word-wrap: break-word;
+            background-color: #ffcf6a;
+            display: block;
+            padding: 0.5rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem; }
+      .page#page-redemption section#redemption .content .steps .step #hexedpublicaddressText {
+        display: block;
+        margin-bottom: 3rem;
+        text-align: center; }
+        .page#page-redemption section#redemption .content .steps .step #hexedpublicaddressText strong {
+          color: #FFFFFF;
+          display: block;
+          margin-bottom: 0.5rem; }
+        .page#page-redemption section#redemption .content .steps .step #hexedpublicaddressText span {
+          word-wrap: break-word;
+          background-color: #ffcf6a;
+          display: block;
+          padding: 0.5rem;
+          border-radius: 0.5rem;
+          font-size: 0.85rem; }
+    .page#page-redemption section#redemption .content .wallets {
+      text-align: center; }
+      .page#page-redemption section#redemption .content .wallets .wallet {
+        display: inline-block;
+        margin: 1rem;
+        text-decoration: none; }
+        .page#page-redemption section#redemption .content .wallets .wallet:hover .image {
+          border-color: #FFC345;
+          opacity: 1;
+          transition: all 0.5s ease; }
+        .page#page-redemption section#redemption .content .wallets .wallet:hover .name {
+          color: #FFC345;
+          opacity: 1;
+          transition: all 0.5s ease; }
+        .page#page-redemption section#redemption .content .wallets .wallet .image {
+          background-color: #FFFFFF;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          margin-bottom: 0.5rem;
+          border: 0.2rem solid transparent;
+          opacity: 0.8;
+          transition: all 0.5s ease; }
+          .page#page-redemption section#redemption .content .wallets .wallet .image > div {
+            width: 5rem;
+            height: 5rem;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            overflow: hidden; }
+        .page#page-redemption section#redemption .content .wallets .wallet .name {
+          text-align: center;
+          color: #FFFFFF;
+          opacity: 0.8; }
+    @media print {
+      .page#page-redemption section#redemption .content > h2 {
+        display: none; }
+      .page#page-redemption section#redemption .content > p {
+        display: none; }
+      .page#page-redemption section#redemption .content .step[data-step="1"] {
+        display: none !important; }
+      .page#page-redemption section#redemption .content .step[data-step="2"] .count, .page#page-redemption section#redemption .content .step[data-step="2"] h3, .page#page-redemption section#redemption .content .step[data-step="2"] p, .page#page-redemption section#redemption .content .step[data-step="2"] a {
+        display: none; }
+      .page#page-redemption section#redemption .content .step[data-step="3"] {
+        display: none !important; }
+      .page#page-redemption section#redemption .content .step[data-step="4"] {
+        display: none !important; } }
+
+footer .copyright {
+  color: #F6C357;
+  line-height: 2;
+  padding: 0 3rem;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+  display: block;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  display: block; }
+footer #footer-holder {
+  background-color: #1E2631;
+  max-height: 30rem;
+  overflow: hidden;
+  text-align: center;
+  position: relative; }
+  @media (max-width: 1130px) {
+    footer #footer-holder {
+      max-height: auto;
+      min-height: 30rem; } }
+  footer #footer-holder .content {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 3rem; }
+    footer #footer-holder .content h2 {
+      color: #FFFFFF;
+      font-size: 2.5rem;
+      font-family: "HKGroteskLight"; }
+    footer #footer-holder .content a.btn {
+      padding: 0.8rem 3rem;
+      margin: 0.5rem;
+      background-color: #FFFFFF;
+      text-decoration: none;
+      color: #F8C545;
+      font-family: "HKGroteskMedium";
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      display: inline-block; }
+      footer #footer-holder .content a.btn:hover {
+        background-color: #F8C545;
+        color: #FFFFFF; }
+    footer #footer-holder .content .social a {
+      color: #FFFFFF;
+      font-size: 1.8rem;
+      display: inline-block;
+      margin: 2rem 1rem; }
+      footer #footer-holder .content .social a:hover {
+        color: #F8C545; }
+      @media (max-width: 1130px) {
+        footer #footer-holder .content .social a {
+          font-size: 1.1rem;
+          margin: 1rem 0.3rem; } }
+  footer #footer-holder .footer-logo {
+    width: 13rem;
+    height: 4rem;
+    background-image: url(/assets/img/footer-logo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 1rem auto;
+    display: block; }
+    @media (max-width: 1130px) {
+      footer #footer-holder .footer-logo {
+        width: 10rem;
+        height: 3rem; } }

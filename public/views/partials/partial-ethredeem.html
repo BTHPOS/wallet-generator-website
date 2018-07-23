@@ -1,0 +1,78 @@
+{{#extend "layout-base"}}
+		{{#content "body"}}
+			{{#embed "partial-header-condensed"}}{{/embed}}
+			<div class="page" id="page-redemption">
+          <section id="redemption">
+							<div class="content">
+								<h2>Generate Bithereum Address</h2>
+								<div class="steps">
+										<div class="step show" data-step="1">
+												<div class="count">1</div>
+												<h3>Create a BTH address</h3>
+												<a href="javascript:void(0);" id="generateaddress">Generate Address</a>
+										</div>
+										<div class="step" data-step="2">
+												<div class="count">2</div>
+												<h3>Save BTH private key and public key</h3>
+												<p>Make sure to note down your newly created BTH public key and private key. NEVER share your private key with anyone!</p>
+												<div id="bthaddress">
+														<div id="publicaddressQRCode">
+																<strong>SHARE</strong>
+																<div id="publicaddressQR"></div>
+																<span>Bithereum Address</span>
+														</div>
+														<div id="privatekeyQRCode">
+																<strong>KEEP SECRET</strong>
+																<div id="privatekeyQR"></div>
+																<span>Private Key</span>
+														</div>
+														<div id="publicaddressText">
+															<strong>Bithereum Address</strong>
+															<span></span>
+														</div>
+														<div id="privatekeyText">
+															<strong>Private Key</strong>
+															<span></span>
+														</div>
+												</div>
+												<a href="javascript:void(0);" onclick="window.print();" id="printaddress">Print Address</a>
+										</div>
+								</div>
+							</div>
+          </section>
+      </div>
+      {{#embed "partial-footer"}}{{/embed}}
+    {{/content}}
+
+		{{#content "scripts"}}
+			<script>
+			$(function() {
+				 	"use strict";
+
+					var $step = $(".steps .step");
+					var $bthaddress = $("#bthaddress");
+					var $publicaddress = $bthaddress.find("#publicaddressQRCode");
+					var $privatekey = $bthaddress.find("#privatekeyQRCode");
+					var $generateAddress = $("#generateaddress");
+					var $publicaddressText = $("#publicaddressText span");
+					var $privatekeyText = $("#privatekeyText span");
+					var $hexedpublicaddressText = $("#hexedpublicaddressText span");
+
+					$generateAddress.on("click", function() {
+								$("#publicaddressQR").html("");
+								$("#privatekeyQR").html("");
+								var keys = coinjs.newKeys();
+								var publicaddressQR = new QRCode("publicaddressQR", {width: 180, height: 180});
+								var privateQR = new QRCode("privatekeyQR", {width: 180, height: 180});
+								publicaddressQR.makeCode(keys.address);
+								privateQR.makeCode(keys.privkey);
+								$publicaddressText.html(keys.address);
+								$privatekeyText.html(keys.privkey);
+								$hexedpublicaddressText.html("0x"+ASCIIHEX.asciitohex(keys.address));
+								$bthaddress.addClass("show");
+								$step.addClass("show");
+					});
+			})
+			</script>
+		{{/content}}
+{{/extend}}
