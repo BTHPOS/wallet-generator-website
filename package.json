@@ -1,0 +1,50 @@
+{
+  "name": "bithereum_walletgenerator",
+  "version": "1.0.0",
+  "description": "Generates a BTH wallet",
+  "main": "server.js",
+  "dependencies": {
+    "boom": "^2.9.0",
+    "dateformat": "^1.0.11",
+    "handlebars": "^4.0.3",
+    "handlebars-layouts": "^3.1.2",
+    "hapi": "^10.1.0",
+    "hashids": "^1.0.2",
+    "hat": "^0.0.3",
+    "hoek": "^2.16.3",
+    "inert": "^3.0.2",
+    "joi": "^6.7.1",
+    "md5": "^2.0.0",
+    "mongojs": "^2.4.0",
+    "moment": "^2.10.6",
+    "mysql": "^2.9.0",
+    "nanotimer": "^0.3.10",
+    "path": "^0.12.7",
+    "redbird": "^0.6.15",
+    "request": "^2.64.0",
+    "voice.js": "^0.1.5",
+    "vision": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BTHPOS/WalletGenerator.git"
+  },
+  "keywords": [
+    "bithereum",
+    "wallet",
+    "bitcoin",
+    "spork",
+    "ethereum"
+  ],
+  "author": "Dondrey Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BTHPOS/WalletGenerator/issues"
+  },
+  "homepage": "https://github.com/BTHPOS/WalletGenerator#readme"
+}
